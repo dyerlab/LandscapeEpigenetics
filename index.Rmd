@@ -1,6 +1,6 @@
 ---
 title: "Landscape Epigenetics"
-author: "C Sheshadri C. & RJ Dyer"
+author: "C Sheshadri & RJ Dyer"
 date: ""
 output: 
   html_document:
