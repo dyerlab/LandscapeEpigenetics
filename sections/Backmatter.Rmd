@@ -1,6 +1,14 @@
+## Acknowledgements
+
+Portions of this work were conducted in support of the masters thesis for CS. The sampling for this project was made possible by a National Science Foundation grant (DEB-0543102) to RJD.  The authors thank the members of the Dyer, Eckert, and Verrelli laboratories for many helpful comments on this work.
+
 ## Citations {.hanging}
 
-This is the citations
+Dyer RJ.  2015.  Landscape Genetics and Population Graphs.  *Annual Review of Ecology, Evolution, and Systematics*, **46**, 327-342.
+
+Dyer RJ.  2015.  Is there such a thing as landscape genetics?  *Molecular Ecology*, **24**, 3518-3528.
+
+Garrick RC, Nason JD, Fernández-Manjarrés JFF, Dyer RJ. 2013. Ecological co-associations influence species’ responses to past climatic change: an example from a Sonoran Desert bark beetle. *Molecular Ecology*, **22**, 3345-3361.
 
 
 
