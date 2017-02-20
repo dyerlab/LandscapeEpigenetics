@@ -1,0 +1,43 @@
+---
+title: "Landscape Epigenetics"
+author: "C Sheshadri C. & RJ Dyer"
+date: ""
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    smooth_scroll: true
+    highlight: tango
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+
+<!--  Abstract -->
+```{r child="sections/Abstract.Rmd"}
+```
+
+<!-- Introduction -->
+```{r child="sections/Introduction.Rmd"}
+```
+
+<!-- Methods -->
+```{r child="sections/Methods.Rmd"}
+```
+
+<!-- Results -->
+```{r child="sections/Results.Rmd"}
+```
+
+<!-- Discussion -->
+```{r child="sections/Discussion.Rmd"}
+```
+
+
+<!-- Citations -->
+```{r child="sections/Backmatter.Rmd"}
+```
+
