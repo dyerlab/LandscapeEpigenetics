@@ -12,6 +12,7 @@ Fulneček J, Kovařík A.  2014. How to interpret Methylation Sensitive Amplifie
 
 Garrick RC, Nason JD, Fernández-Manjarrés JFF, Dyer RJ. 2013. Ecological co-associations influence species’ responses to past climatic change: an example from a Sonoran Desert bark beetle. *Molecular Ecology*, **22**, 3345-3361.
 
+Pérez-Figueroa A.  2013.  msap: a tool for the statistical analysis of methylation-sensitive amplified polymorphism data. *Molecular Ecology Resources*, **13**, 522–527.
 
 
 ## Appendices
