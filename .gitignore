@@ -3,5 +3,3 @@
 .RData
 .Ruserdata
 .DS_Store
-sections/*.html
-index.Rmd
