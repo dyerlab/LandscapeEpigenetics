@@ -8,6 +8,8 @@ Dyer RJ.  2015.  Landscape Genetics and Population Graphs.  *Annual Review of Ec
 
 Dyer RJ.  2015.  Is there such a thing as landscape genetics?  *Molecular Ecology*, **24**, 3518-3528.
 
+Fulneček J, Kovařík A.  2014. How to interpret Methylation Sensitive Amplified Polymorphism (MSAP) profiles? *BMC Genetics*, **15**, 2.
+
 Garrick RC, Nason JD, Fernández-Manjarrés JFF, Dyer RJ. 2013. Ecological co-associations influence species’ responses to past climatic change: an example from a Sonoran Desert bark beetle. *Molecular Ecology*, **22**, 3345-3361.
 
 

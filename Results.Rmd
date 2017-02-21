@@ -23,6 +23,13 @@ coords$Lhpa <- NA
 knitr::kable(coords, caption="Sample locations, intensity, and numer of loci genotyped for both methylation sensitive (L<sub>HPA-II</sub>) and methylation insensivite (L<sub>MspI</sub>) markers.")
 ```
 
+```{r}
+library(ggplot2)
+library(ggmap)
+library(ggrepel)
+map <- population_map(coords[c(1:17,19),], zoom=7)
+ggmap( map ) + geom_label_repel( aes(x=Longitude,y=Latitude, label=Locale), data=coords) + xlab("Longitude") + ylab("Latitude")
+```
 
 
 ### Methylation-Sensitive AFLP 

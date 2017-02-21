@@ -17,27 +17,27 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning = FALSE, error = FALS
 
 
 <!--  Abstract -->
-```{r child="sections/Abstract.Rmd"}
+```{r child="Abstract.Rmd"}
 ```
 
 <!-- Introduction -->
-```{r child="sections/Introduction.Rmd"}
+```{r child="Introduction.Rmd"}
 ```
 
 <!-- Methods -->
-```{r child="sections/Methods.Rmd", message=FALSE, warning = FALSE}
+```{r child="Methods.Rmd"}
 ```
 
 <!-- Results -->
-```{r child="sections/Results.Rmd"}
+```{r child="Results.Rmd"}
 ```
 
 <!-- Discussion -->
-```{r child="sections/Discussion.Rmd"}
+```{r child="Discussion.Rmd"}
 ```
 
 
 <!-- Citations -->
-```{r child="sections/Backmatter.Rmd"}
+```{r child="Backmatter.Rmd"}
 ```
 
