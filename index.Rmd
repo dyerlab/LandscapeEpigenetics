@@ -12,7 +12,11 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning = FALSE, error = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE, error = FALSE)
+
+cran_libs <- c("devtools","ggplot2","ggmap")
+github_libs <- c("plantarum/binner", "dyerlab/gstudio", "dyerlab/popgraph")
+
 ```
 
 

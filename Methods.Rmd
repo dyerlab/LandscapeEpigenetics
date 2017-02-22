@@ -6,7 +6,6 @@
 
 For this project, individuals were sampled from locales known to be of only the largest and main mtDNA clade from peninsular Baja California.  Previous work in this species has revealed a clade-specific diagnostic SNP marker, which all individuals were screened to ensure observed genetic and epigeneic differences were consistent with a monophyletic history.  Individuals were from twenty populations were sampled.  Since the original sampling included collecting several individuals from each of up to 10 plants per site and subsequent analyses have suggested that individual in the same plant are related, only a single animal was selected from each host plant at each site.
 
-
 ### Methylation-Sensitive AFLP 
 
 Genomic DNA was extracted using the Qiagen DNA Blood and Tissue extraction kit (Qiagen Inc, Natick MA), deviating only from the manufacturers standard protocol by an overnight extension of the protenase-K incubation period and resuspension in DNase/RNase free water rather than the "EB" elution buffer as EDTA has been shown to inhibit downstream AFLP analyses.  The presence of methylation was identified using methylation-sensitive AFLP analyses.  This approach extends the traditional Amplified Fragment Length Polymorphism (AFLP) approach by pairing a one of the normal cutting enzymes with a methylation sensitive isoschizomer.  For our purposes, we paired the *MspI* enzyme, which is not sensitive to the presence of cytosine methylation with *HpaII*, which is inhibited from cutting template DNA in the presence of methylation.  Divergent fragment profiles for the same template DNA cut individually with both *MspI* and *HpaII* reveal the presence of cytosize methylation (see Figure X).  
@@ -54,7 +53,7 @@ Fragments from both NUC and METH profiles were identified using an ABI3730xl DNA
 
 ### Spatial Genetic Analyses
 
-Sizing of AFLP fragments for both NUC and METH profiles were conducted using the `msap` R package (version 1.1.8 Pérez-Figueroa 2014).  Fragment sizes were estimated based upon the methylation insensitive profiles (NUC) after which METH profiles were scored.  Estimates of methylation frequencies (unmethylated, hemimethylated, internal cytosine methylation, and full methylation) were estimated across all data.  Band fragments were filtered based upon both frequency and QA/QC with the removal of any bands whose global frequency was less than 5% and whose repeatability across replicate runs exceeded a 5% scoring error.  
+Sizing of AFLP fragments for both NUC and METH profiles were conducted using the `binner` R package (version 1.1.8 Pérez-Figueroa 2014).  Fragment sizes were estimated based upon the methylation insensitive profiles (NUC) after which METH profiles were scored.  Estimates of methylation frequencies (unmethylated, hemimethylated, internal cytosine methylation, and full methylation) were estimated across all data.  Band fragments were filtered based upon both frequency and QA/QC with the removal of any bands whose global frequency was less than 5% and whose repeatability across replicate runs exceeded a 5% scoring error.  
 
 The amount of standing genetic variation across all NUC loci was examined across two different at two different levels. First, the 
 
