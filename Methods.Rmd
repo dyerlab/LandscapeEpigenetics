@@ -49,7 +49,42 @@ The Selective Amplification step was conducted using a 2X Type-It Microsatellite
 
 Each animal sample was assayed for both a non-methylation sensitive (NUC) marker profile using the *EcoRI+MspI* combination of enzymes and a methylation sensitive (METH) genetic marker profile using *EcoRI+HPAII*.  In the absence of methylation, the presence or absence of DNA fragments will be identical in NUC and METH profiles, whereas with methylation, either as a hemimethylated cytosine or as a methylation site on the internal cytosine residue, NUC and METH will produce different methylation profiles (see again Figure 1). We interpret these presence/absence band profiles as either denoting an unmethylated state (+/+), a methylated state (+/-) or (-/+), or an uninformative state (-/-).
 
-Fragments from both NUC and METH profiles were identified using an ABI3730xl DNA Analyzer (Applied Biosystems, Inc.), using LIZ500 (orange) as the size standard.  Individual trace files for each trace were analyzed using the ‘Binner’ package (version 0.1, Smith 2014 ) in R (version 3.0.1).  Bin sizes for fragments were set to be in the range of 1-1.5bp in width.  Profiles were generated automatically and then checked by hand.  Duplicate samples were run for QA/QC.  Bands with poor repeatability (e.g., error rates in duplicate runs exceeding 5%) were dropped from the analyses (see again Table 1).  Bins were defined based upon NUC profiles and then METH profiles were called using the same classification scheme.  Individual fragments were converted to AFLP genetic markers (absence/presence of fragment) for each locus using the `gstudio` R library (Dyer, 2017). 
+Fragments from both NUC and METH profiles were identified using an ABI3730xl DNA Analyzer (Applied Biosystems, Inc.), using LIZ500 (orange) as the size standard.  Individual trace files for each trace were analyzed using the `binner` package (version 0.1, Smith 2014 ) in R (version 3.0.1).  Bin sizes for fragments were set to be in the range of 1-1.5bp in width.  
+
+```{r eval=FALSE}
+require(binner)
+
+# Read in raw files, load them in and save as a data.frame 
+msp_files <- list.files( path="data/traces/MSP-raw", pattern="*.fsa", full.names=TRUE)
+msp_fsa <- readFSA( msp_files, dye=c("FAM"), bin.width = 1, min.peak.height = 50, CORES=4)
+save(msp_fsa, file="data/msp_fas.rda")
+
+# ibid
+hpa_files <- list.files( path="data/traces/HPA-raw/", pattern="*.fsa", full.names=TRUE )
+hpa_fsa <- readFSA( hpa_files, dye=c("FAM"), bin.width=1, min.peak.height = 50, CORES=4)
+save(hpa_fsa, file="data/hpa_fsa.rda")
+```
+
+Profiles were generated automatically and then checked by hand.  
+
+```{r}
+# funciton to 
+null_traces <- function( df ){
+  ret <- c()
+  for( id in names(df$ep)){
+    
+  }
+  return( ret )
+}
+```
+
+
+
+
+Duplicate samples were run for QA/QC.  Bands with poor repeatability (e.g., error rates in duplicate runs exceeding 5%) were dropped from the analyses (see again Table 1).  Bins were defined based upon NUC profiles and then METH profiles were called using the same classification scheme.  Individual fragments were converted to AFLP genetic markers (absence/presence of fragment) for each locus using the `gstudio` R library (Dyer, 2017). 
+
+
+
 
 ### Spatial Genetic Analyses
 
