@@ -63,6 +63,7 @@ drop <- c("M161.3","M168.3","M89.4")
 idx <- which( names(msp_fsa$ep) %in% drop ) 
 msp_fsa <- fsaDrop( msp_fsa, idx )
 
+# Save for output
 save(msp_fsa, file="data/msp_fas.rda")
 
 # ibid
