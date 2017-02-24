@@ -57,6 +57,12 @@ require(binner)
 # Read in raw files, load them in and save as a data.frame 
 msp_files <- list.files( path="data/traces/MSP-raw", pattern="*.fsa", full.names=TRUE)
 msp_fsa <- readFSA( msp_files, dye=c("FAM"), bin.width = 1, min.peak.height = 50, CORES=4)
+
+# Three sizing errors were reported
+drop <- c("M161.3","M168.3","M89.4")
+idx <- which( names(msp_fsa$ep) %in% drop ) 
+msp_fsa <- fsaDrop( msp_fsa, idx )
+
 save(msp_fsa, file="data/msp_fas.rda")
 
 # ibid
@@ -68,16 +74,11 @@ save(hpa_fsa, file="data/hpa_fsa.rda")
 Profiles were generated automatically and then checked by hand.  
 
 ```{r}
-# funciton to 
-null_traces <- function( df ){
-  ret <- c()
-  for( id in names(df$ep)){
-    
-  }
-  return( ret )
-}
+msp_fsa <- fsaNormalize(msp_fsa)
+pt <- fsa2PeakTab( msp_fsa , dye="FAM")
+bins <- fsaRGbin(pt, mnbin=1, mxbin=1.5, verbose=FALSE )
+msp_data <- binSet(pt, bins, pref="loc")
 ```
-
 
 
 
