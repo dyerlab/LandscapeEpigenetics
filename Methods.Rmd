@@ -51,6 +51,20 @@ Each animal sample was assayed for both a non-methylation sensitive (NUC) marker
 
 Fragments from both NUC and METH profiles were identified using an ABI3730xl DNA Analyzer (Applied Biosystems, Inc.), using LIZ500 (orange) as the size standard.  Individual trace files for each trace were analyzed using the `binner` package (version 0.1, Smith 2014 ) in R (version 3.0.1).  Bin sizes for fragments were set to be in the range of 1-1.5bp in width.  
 
+```{r message=FALSE}
+# Check to see if there is a binner package and if not, install it.
+if( !require(binner) ){
+  if( !require(devtools)){
+    install.packages("devtools")
+  }
+  devtools::install_github("plantarum/binner")
+}
+library(binner)
+```
+
+
+
+
 ```{r eval=FALSE}
 require(binner)
 
@@ -71,6 +85,14 @@ hpa_files <- list.files( path="data/traces/HPA-raw/", pattern="*.fsa", full.name
 hpa_fsa <- readFSA( hpa_files, dye=c("FAM"), bin.width=1, min.peak.height = 50, CORES=4)
 save(hpa_fsa, file="data/hpa_fsa.rda")
 ```
+
+
+```{r echo=FALSE}
+
+load("data/hpa_fsa.rda")
+load("data/msp_fas.rda")
+```
+
 
 Profiles were generated automatically and then checked by hand.  
 
