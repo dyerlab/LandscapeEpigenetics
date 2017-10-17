@@ -104,6 +104,11 @@ bins <- fsaRGbin(pt, mnbin=1, mxbin=1.5, verbose=FALSE )
 msp_data <- binSet(pt, bins, pref="loc")
 ```
 
+```{r}
+# Add binSet function here.
+
+
+```
 
 
 Duplicate samples were run for QA/QC.  Bands with poor repeatability (e.g., error rates in duplicate runs exceeding 5%) were dropped from the analyses (see again Table 1).  Bins were defined based upon NUC profiles and then METH profiles were called using the same classification scheme.  Individual fragments were converted to AFLP genetic markers (absence/presence of fragment) for each locus using the `gstudio` R library (Dyer, 2017). 
