@@ -66,7 +66,8 @@ library(binner)
 
 
 ```{r eval=FALSE}
-require(binner)
+# This is run once and then I save the output just due to the
+#   long time it takes to run.
 
 # Read in raw files, load them in and save as a data.frame 
 msp_files <- list.files( path="data/traces/MSP-raw", pattern="*.fsa", full.names=TRUE)
@@ -88,7 +89,7 @@ save(hpa_fsa, file="data/hpa_fsa.rda")
 
 
 ```{r echo=FALSE}
-
+# here I load in the results from the previous code that was not run.
 load("data/hpa_fsa.rda")
 load("data/msp_fas.rda")
 ```
